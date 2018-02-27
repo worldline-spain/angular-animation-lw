@@ -1,0 +1,22 @@
+{
+  "name": "angular-animations-lw",
+  "version": "1.0.0",
+  "description": "Angular animation lw",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worldline-spain/angular-animations-lw.git"
+  },
+  "dependencies": {
+    "@angular/core": "4.4.4",
+    "tslib": "^1.7.1"
+  },
+  "author": "Killian Perea Ruiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/worldline-spain/angular-animations-lw/issues"
+  },
+  "homepage": "https://github.com/worldline-spain/angular-animations-lw#readme"
+}
