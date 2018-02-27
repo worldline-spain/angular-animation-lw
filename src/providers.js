@@ -24,7 +24,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", "@angular/animations", "../../browser/src/browser", "@angular/core", "@angular/platform-browser", "./animation_builder", "./animation_renderer"], function (require, exports, animations_1, browser_1, core_1, platform_browser_1, animation_builder_1, animation_renderer_1) {
+define(["require", "exports", "@angular/animations", "angular-browser-wl/src/browser", "@angular/core", "@angular/platform-browser", "./animation_builder", "./animation_renderer"], function (require, exports, animations_1, browser_1, core_1, platform_browser_1, animation_builder_1, animation_renderer_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var InjectableAnimationEngine = (function (_super) {

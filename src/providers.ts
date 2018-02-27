@@ -7,7 +7,7 @@
  */
 
 import {AnimationBuilder} from '@angular/animations';
-import {AnimationDriver, ɵAnimationEngine as AnimationEngine, ɵAnimationStyleNormalizer as AnimationStyleNormalizer, ɵNoopAnimationDriver as NoopAnimationDriver, ɵWebAnimationsDriver as WebAnimationsDriver, ɵWebAnimationsStyleNormalizer as WebAnimationsStyleNormalizer, ɵsupportsWebAnimations as supportsWebAnimations} from '../../browser/src/browser';
+import {AnimationDriver, ɵAnimationEngine as AnimationEngine, ɵAnimationStyleNormalizer as AnimationStyleNormalizer, ɵNoopAnimationDriver as NoopAnimationDriver, ɵWebAnimationsDriver as WebAnimationsDriver, ɵWebAnimationsStyleNormalizer as WebAnimationsStyleNormalizer, ɵsupportsWebAnimations as supportsWebAnimations} from 'angular-browser-wl/src/browser';
 import {Injectable, NgZone, Provider, RendererFactory2} from '@angular/core';
 import {ɵDomRendererFactory2 as DomRendererFactory2} from '@angular/platform-browser';
 
