@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@angular/core": "4.4.4",
-    "angular-browser-wl": "git+https://github.com/worldline-spain/angular-browser-wl.git#develop",
     "tslib": "^1.7.1",
-    "@angular/animations": "4.4.4"
+    "@angular/animations": "4.4.4",
+    "@angular/platform-browser": "4.4.4"
   },
   "author": "Killian Perea Ruiz",
   "license": "MIT",

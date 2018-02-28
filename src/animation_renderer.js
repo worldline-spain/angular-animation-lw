@@ -17,7 +17,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", "angular-browser-wl/src/browser", "@angular/core"], function (require, exports, browser_1, core_1) {
+define(["require", "exports", "../browser/src/browser", "@angular/core"], function (require, exports, browser_1, core_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var ANIMATION_PREFIX = '@';
