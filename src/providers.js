@@ -27,7 +27,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var animations_1 = require("@angular/animations");
-var browser_1 = require("../browser/src/browser");
+var angular_browser_wl_1 = require("angular-browser-wl");
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var animation_builder_1 = require("./animation_builder");
@@ -39,20 +39,20 @@ var InjectableAnimationEngine = (function (_super) {
     }
     InjectableAnimationEngine = __decorate([
         core_1.Injectable(),
-        __metadata("design:paramtypes", [browser_1.AnimationDriver, browser_1.ɵAnimationStyleNormalizer])
+        __metadata("design:paramtypes", [angular_browser_wl_1.AnimationDriver, angular_browser_wl_1.ɵAnimationStyleNormalizer])
     ], InjectableAnimationEngine);
     return InjectableAnimationEngine;
-}(browser_1.ɵAnimationEngine));
+}(angular_browser_wl_1.ɵAnimationEngine));
 exports.InjectableAnimationEngine = InjectableAnimationEngine;
 function instantiateSupportedAnimationDriver() {
-    if (browser_1.ɵsupportsWebAnimations()) {
-        return new browser_1.ɵWebAnimationsDriver();
+    if (angular_browser_wl_1.ɵsupportsWebAnimations()) {
+        return new angular_browser_wl_1.ɵWebAnimationsDriver();
     }
-    return new browser_1.ɵNoopAnimationDriver();
+    return new angular_browser_wl_1.ɵNoopAnimationDriver();
 }
 exports.instantiateSupportedAnimationDriver = instantiateSupportedAnimationDriver;
 function instantiateDefaultStyleNormalizer() {
-    return new browser_1.ɵWebAnimationsStyleNormalizer();
+    return new angular_browser_wl_1.ɵWebAnimationsStyleNormalizer();
 }
 exports.instantiateDefaultStyleNormalizer = instantiateDefaultStyleNormalizer;
 function instantiateRendererFactory(renderer, engine, zone) {
@@ -61,11 +61,11 @@ function instantiateRendererFactory(renderer, engine, zone) {
 exports.instantiateRendererFactory = instantiateRendererFactory;
 var SHARED_ANIMATION_PROVIDERS = [
     { provide: animations_1.AnimationBuilder, useClass: animation_builder_1.BrowserAnimationBuilder },
-    { provide: browser_1.ɵAnimationStyleNormalizer, useFactory: instantiateDefaultStyleNormalizer },
-    { provide: browser_1.ɵAnimationEngine, useClass: InjectableAnimationEngine }, {
+    { provide: angular_browser_wl_1.ɵAnimationStyleNormalizer, useFactory: instantiateDefaultStyleNormalizer },
+    { provide: angular_browser_wl_1.ɵAnimationEngine, useClass: InjectableAnimationEngine }, {
         provide: core_1.RendererFactory2,
         useFactory: instantiateRendererFactory,
-        deps: [platform_browser_1.ɵDomRendererFactory2, browser_1.ɵAnimationEngine, core_1.NgZone]
+        deps: [platform_browser_1.ɵDomRendererFactory2, angular_browser_wl_1.ɵAnimationEngine, core_1.NgZone]
     }
 ];
 /**
@@ -73,11 +73,11 @@ var SHARED_ANIMATION_PROVIDERS = [
  * include them in the BrowserModule.
  */
 exports.BROWSER_ANIMATIONS_PROVIDERS = [
-    { provide: browser_1.AnimationDriver, useFactory: instantiateSupportedAnimationDriver }
+    { provide: angular_browser_wl_1.AnimationDriver, useFactory: instantiateSupportedAnimationDriver }
 ].concat(SHARED_ANIMATION_PROVIDERS);
 /**
  * Separate providers from the actual module so that we can do a local modification in Google3 to
  * include them in the BrowserTestingModule.
  */
-exports.BROWSER_NOOP_ANIMATIONS_PROVIDERS = [{ provide: browser_1.AnimationDriver, useClass: browser_1.ɵNoopAnimationDriver }].concat(SHARED_ANIMATION_PROVIDERS);
+exports.BROWSER_NOOP_ANIMATIONS_PROVIDERS = [{ provide: angular_browser_wl_1.AnimationDriver, useClass: angular_browser_wl_1.ɵNoopAnimationDriver }].concat(SHARED_ANIMATION_PROVIDERS);
 //# sourceMappingURL=providers.js.map

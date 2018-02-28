@@ -19,7 +19,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var browser_1 = require("../browser/src/browser");
+var angular_browser_wl_1 = require("angular-browser-wl");
 var core_1 = require("@angular/core");
 var ANIMATION_PREFIX = '@';
 var DISABLE_ANIMATIONS_FLAG = '@.disabled';
@@ -114,7 +114,7 @@ var AnimationRendererFactory = (function () {
     AnimationRendererFactory.prototype.whenRenderingDone = function () { return this.engine.whenRenderingDone(); };
     AnimationRendererFactory = __decorate([
         core_1.Injectable(),
-        __metadata("design:paramtypes", [core_1.RendererFactory2, browser_1.ɵAnimationEngine, core_1.NgZone])
+        __metadata("design:paramtypes", [core_1.RendererFactory2, angular_browser_wl_1.ɵAnimationEngine, core_1.NgZone])
     ], AnimationRendererFactory);
     return AnimationRendererFactory;
 }());
